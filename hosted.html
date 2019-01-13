@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>AIAIAI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI</h1>
+        <h2>Hosted projects</h2>
+        /etc/nginx/sites-available/default
+        <br>
+        <span id="project-ysda-test-status"></span>
+        static -> <a href="http://ysda-test.aiaiai.team">ysda-test.aiaiai.team</a>
+        <br>
+        <span id="project-lgotniki_backend-status"></span>
+        8000 -> <a href="http://lgotniki_backend.aiaiai.team">lgotniki_backend.aiaiai.team</a>
+        <br>
+        <span id="project-chuzi_backend-status"></span>
+        8001 -> <a href="http://chuzi_backend.aiaiai.team">chuzi_backend.aiaiai.team</a>
+        <br>
+        <span id="project-neuralme-status"></span>
+        8002 -> <a href="http://neuralme.aiaiai.team">neuralme.aiaiai.team</a>
+        <br>
+        <span id="project-inpaint-status"></span>
+        8003 -> <a href="http://inpaint.aiaiai.team">inpaint.aiaiai.team</a>
+        <br>
+        <span id="project-inpaint-mongo-status"></span>
+        8004 -> <a href="http://inpaint-mongo.aiaiai.team">inpaint-mongo.aiaiai.team</a>
+        <br>
+        <br>
+        <span id="project-parkinson-status"></span>
+        6000 -> <a href="http://parkinson.aiaiai.team">parkinson.aiaiai.team</a>
+        <br>
+        <span id="project-parkinson-adminer-status"></span>
+        8080 -> <a href="http://parkinson-adminer.aiaiai.team">parkinson-adminer.aiaiai.team</a>
+        <br>
+        <span id="project-parkinson-flower-status"></span>
+        5555 -> <a href="http://parkinson-flower.aiaiai.team">parkinson-flower.aiaiai.team</a>
+        <br>
+        <br>
+        <h2>Hosted files</h2>
+        /var/www/html/
+        <br>
+        <a href="./app-debug.apk">Chuzi .apk</a>
+        <br>
+        <br>
+
+        <script type="text/javascript">
+            function UrlExists(url, cb) {
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    complete: function(xhr) {
+                        cb(xhr.status);
+                    }
+                });
+            }
+
+            var projects = [
+                "ysda-test",
+                "lgotniki_backend",
+                "chuzi_backend",
+                "neuralme",
+                "inpaint",
+                "inpaint-mongo",
+                "parkinson",
+                "parkinson-adminer",
+                "parkinson-flower"
+            ];
+            projects.forEach(function(item) {
+                UrlExists("http://" + item + ".aiaiai.team/", function(status) {
+                    if(status === 200) {
+                       $("#project-" + item + "-status").text("OK");
+                       $("#project-" + item + "-status").css("background-color", "green");
+                    } else {
+                       $("#project-" + item + "-status").text("ERROR " + status);
+                       $("#project-" + item + "-status").css("background-color", "red");
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
