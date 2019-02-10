@@ -11,13 +11,21 @@
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
+
+    <style>
+        h1 a, h1 a:hover {
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI</h1>
-        <h2>Hosted projects</h2>
-        /etc/nginx/sites-available/default
-        <br>
+        <h1>
+            <a href="/">AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI</a>
+            >
+            <a href="#">hosted</a>
+        </h1>
+        <h2>Hosted projects <small>/etc/nginx/sites-available/default</small></h2>
         <span id="project-ysda-test-status"></span>
         static -> <a href="http://ysda-test.aiaiai.team">ysda-test.aiaiai.team</a>
         <br>
@@ -30,11 +38,16 @@
         <span id="project-neuralme-status"></span>
         8002 -> <a href="http://neuralme.aiaiai.team">neuralme.aiaiai.team</a>
         <br>
+        <br>
         <span id="project-inpaint-status"></span>
         8003 -> <a href="http://inpaint.aiaiai.team">inpaint.aiaiai.team</a>
         <br>
         <span id="project-inpaint-mongo-status"></span>
         8004 (docker) -> <a href="http://inpaint-mongo.aiaiai.team">inpaint-mongo.aiaiai.team</a>
+        <br>
+        <br>
+        <span id="project-moodle-status"></span>
+        8005 (docker) -> <a href="http://moodle.aiaiai.team">moodle.aiaiai.team</a>
         <br>
         <br>
         <span id="project-parkinson-status"></span>
@@ -47,9 +60,7 @@
         5555 (docker) -> <a href="http://parkinson-flower.aiaiai.team">parkinson-flower.aiaiai.team</a>
         <br>
         <br>
-        <h2>Hosted files</h2>
-        /var/www/html/
-        <br>
+        <h2>Hosted files <small>/var/www/html/</small></h2>
         <a href="./app-debug.apk">Chuzi .apk</a>
         <br>
         <br>
@@ -72,6 +83,7 @@
                 "neuralme",
                 "inpaint",
                 "inpaint-mongo",
+                "moodle",
                 "parkinson",
                 "parkinson-adminer",
                 "parkinson-flower"
