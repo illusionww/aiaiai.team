@@ -50,6 +50,10 @@
         8005 (docker) -> <a href="http://moodle.aiaiai.team">moodle.aiaiai.team</a>
         <br>
         <br>
+        <span id="project-gan-calculator-status"></span>
+        8006 -> <a href="http://gan-calculator.aiaiai.team">gan-calculator.aiaiai.team</a>
+        <br>
+        <br>
         <span id="project-parkinson-status"></span>
         6000 -> <a href="http://parkinson.aiaiai.team">parkinson.aiaiai.team</a>
         <br>
@@ -86,7 +90,8 @@
                 "moodle",
                 "parkinson",
                 "parkinson-adminer",
-                "parkinson-flower"
+                "parkinson-flower",
+                "gan-calculator"
             ];
             projects.forEach(function(item) {
                 UrlExists("http://" + item + ".aiaiai.team/", function(status) {
