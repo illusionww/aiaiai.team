@@ -5,13 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <style>
         h1 a, h1 a:hover {
             color: black;
@@ -19,108 +16,121 @@
     </style>
 </head>
 <body>
+<div style="width: 100%; overflow: hidden">
     <div class="container">
         <h1>
-            <a href="/">AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI</a>
-            >
-            <a href="#">hosted</a>
+            <a href="#" style="white-space: nowrap">
+                AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI AIAIAI
+                AIAIAI AIAIAI AIAIAI
+            </a>
+            > hosted
         </h1>
-        <h2>Hosted projects <small>/etc/nginx/sites-available/default</small></h2>
-        <span id="project-ysda-test-status"></span>
-        static -> <a href="http://ysda-test.aiaiai.team">ysda-test.aiaiai.team</a>
-        <br>
-        <span id="project-lgotniki_backend-status"></span>
-        8000 -> <a href="http://lgotniki_backend.aiaiai.team">lgotniki_backend.aiaiai.team</a>
-        <br>
-        <span id="project-chuzi_backend-status"></span>
-        8001 -> <a href="http://chuzi_backend.aiaiai.team">chuzi_backend.aiaiai.team</a>
-        <br>
-        <span id="project-neuralme-status"></span>
-        8002 -> <a href="http://neuralme.aiaiai.team">neuralme.aiaiai.team</a>
-        <br>
-        <br>
-        <span id="project-inpaint-status"></span>
-        8003 -> <a href="http://inpaint.aiaiai.team">inpaint.aiaiai.team</a>
-        <br>
-        <span id="project-inpaint-mongo-status"></span>
-        8004 (docker) -> <a href="http://inpaint-mongo.aiaiai.team">inpaint-mongo.aiaiai.team</a>
-        <br>
-        <br>
-        <span id="project-moodle-status"></span>
-        8005 (docker) -> <a href="http://moodle.aiaiai.team">moodle.aiaiai.team</a>
-        <br>
-        <br>
-        <span id="project-gan-calculator-status"></span>
-        8006 -> <a href="http://gan-calculator.aiaiai.team">gan-calculator.aiaiai.team</a>
-        <br>
-        <br>
-        <span id="project-parkinson-status"></span>
-        6000 -> <a href="http://parkinson.aiaiai.team">parkinson.aiaiai.team</a>
-        <br>
-        <span id="project-parkinson-adminer-status"></span>
-        8080 (docker) -> <a href="http://parkinson-adminer.aiaiai.team">parkinson-adminer.aiaiai.team</a>
-        <br>
-        <span id="project-parkinson-flower-status"></span>
-        5555 (docker) -> <a href="http://parkinson-flower.aiaiai.team">parkinson-flower.aiaiai.team</a>
-        <br>
-        <br>
-        <h2>Hosted files <small>/var/www/html/</small></h2>
-        <a href="./app-debug.apk">Chuzi .apk</a>
-        <br>
-        <br>
-
-        <script type="text/javascript">
-            function UrlExists(url, cb) {
-                $.ajax({
-                    url: url,
-                    type: 'GET',
-                    complete: function(xhr) {
-                        cb(xhr.status);
-                    }
-                });
-            }
-
-            var projects = [
-                "ysda-test",
-                "lgotniki_backend",
-                "chuzi_backend",
-                "neuralme",
-                "inpaint",
-                "inpaint-mongo",
-                "moodle",
-                "parkinson",
-                "parkinson-adminer",
-                "parkinson-flower",
-                "gan-calculator"
-            ];
-            projects.forEach(function(item) {
-                UrlExists("http://" + item + ".aiaiai.team/", function(status) {
-                    if(status === 200) {
-                       $("#project-" + item + "-status").text("OK");
-                       $("#project-" + item + "-status").css("background-color", "green");
-                    } else {
-                       $("#project-" + item + "-status").text("ERROR " + status);
-                       $("#project-" + item + "-status").css("background-color", "red");
-                    }
-                });
-            });
-        </script>
     </div>
+</div>
+<div class="container">
+    <h2>Hosted projects <small>/etc/nginx/sites-available/default</small></h2>
+    <span id="project-ysda-test-status"></span>
+    static -> <a href="http://ysda-test.aiaiai.team">ysda-test.aiaiai.team</a>
+    <br>
+    <span id="project-lgotniki_backend-status"></span>
+    8000 -> <a href="http://lgotniki_backend.aiaiai.team">lgotniki_backend.aiaiai.team</a>
+    <br>
+    <span id="project-chuzi_backend-status"></span>
+    8001 -> <a href="http://chuzi_backend.aiaiai.team">chuzi_backend.aiaiai.team</a>
+    <br>
+    <span id="project-neuralme-status"></span>
+    8002 -> <a href="http://neuralme.aiaiai.team">neuralme.aiaiai.team</a>
+    <br>
+    <br>
+    <span id="project-inpaint-status"></span>
+    8003 -> <a href="http://inpaint.aiaiai.team">inpaint.aiaiai.team</a>
+    <br>
+    <span id="project-inpaint-mongo-status"></span>
+    8004 (docker) -> <a href="http://inpaint-mongo.aiaiai.team">inpaint-mongo.aiaiai.team</a>
+    <br>
+    <br>
+    <span id="project-moodle-status"></span>
+    8005 (docker) -> <a href="http://moodle.aiaiai.team">moodle.aiaiai.team</a>
+    <br>
+    <br>
+    <span id="project-gan-calculator-status"></span>
+    8006 -> <a href="http://gan-calculator.aiaiai.team">gan-calculator.aiaiai.team</a>
+    <br>
+    <br>
+    <span id="project-parkinson-status"></span>
+    6000 -> <a href="http://parkinson.aiaiai.team">parkinson.aiaiai.team</a>
+    <br>
+    <span id="project-parkinson-adminer-status"></span>
+    8080 (docker) -> <a href="http://parkinson-adminer.aiaiai.team">parkinson-adminer.aiaiai.team</a>
+    <br>
+    <span id="project-parkinson-flower-status"></span>
+    5555 (docker) -> <a href="http://parkinson-flower.aiaiai.team">parkinson-flower.aiaiai.team</a>
+    <br>
+    <br>
+    <h2>Hosted files <small>/var/www/html/</small></h2>
+    <a href="./app-debug.apk">Chuzi .apk</a>
+    <br>
+    <br>
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
-       ym(52315369, "init", {
-            id:52315369,
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-       });
+    <script type="text/javascript">
+        function UrlExists(url, cb) {
+            $.ajax({
+                url: url,
+                type: 'GET',
+                complete: function (xhr) {
+                    cb(xhr.status);
+                }
+            });
+        }
+
+        var projects = [
+            "ysda-test",
+            "lgotniki_backend",
+            "chuzi_backend",
+            "neuralme",
+            "inpaint",
+            "inpaint-mongo",
+            "moodle",
+            "parkinson",
+            "parkinson-adminer",
+            "parkinson-flower",
+            "gan-calculator"
+        ];
+        projects.forEach(function (item) {
+            UrlExists("http://" + item + ".aiaiai.team/", function (status) {
+                if (status === 200) {
+                    $("#project-" + item + "-status").text("OK");
+                    $("#project-" + item + "-status").css("background-color", "green");
+                } else {
+                    $("#project-" + item + "-status").text("ERROR " + status);
+                    $("#project-" + item + "-status").css("background-color", "red");
+                }
+            });
+        });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/52315369" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+</div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(52315369, "init", {
+        id: 52315369,
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+    });
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/52315369" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>
